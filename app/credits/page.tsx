@@ -33,7 +33,7 @@ export default function CreditsPage() {
         <div className="credits-container">
           <div className="credits-header">
             <div className="credits-icon">
-              <div className="icon-inner"></div>
+              <CreditCard className="w-6 h-6 text-white" />
             </div>
             <h1 className="credits-title">Your Credits</h1>
             <p className="credits-subtitle">Manage your download credits</p>
@@ -96,30 +96,6 @@ export default function CreditsPage() {
     justify-content: center;
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
     position: relative;
-  }
-
-  .icon-inner::before {
-    content: '';
-    width: 24px;
-    height: 16px;
-    background: white;
-    border-radius: 3px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .icon-inner::after {
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 1.5px;
-    background: white;
-    border-radius: 1px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% + 5px));
   }
 
   .credits-title {
