@@ -309,7 +309,6 @@ export default function FileManager() {
         <div className="space-y-2">
           {[
             { id: 'home', label: 'Home', icon: Home },
-            { id: 'pdfs', label: 'My PDFs', icon: FileText },
             { id: 'contribute', label: 'Contribute', icon: Upload },
             { id: 'credits', label: 'Credits', icon: CreditCard },
             { id: 'settings', label: 'Settings', icon: Settings }
@@ -318,7 +317,7 @@ export default function FileManager() {
               key={item.id}
               onClick={() => {
                 setActiveView(item.id)
-                if (item.id === 'home' || item.id === 'pdfs') {
+                if (item.id === 'home') {
                   setCurrentPath('/')
                 }
               }}
@@ -852,7 +851,7 @@ const AuthModal = () => (
       <Sidebar />
       
       <main className="flex-1 overflow-auto bg-gray-900">
-        {(activeView === 'home' || activeView === 'pdfs') && <HomeView />}
+        {activeView === 'home' && <HomeView />}
         {activeView === 'contribute' && <ContributeView />}
         {activeView === 'credits' && <CreditsView />}
         {activeView === 'settings' && <SettingsView />}
