@@ -121,3 +121,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide scrollbars for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Hide scrollbars for Firefox */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Ensure scroll functionality is maintained */
+html, body {
+  overflow: auto;
+}
+
+/* Specific scrollbar hiding for main content areas */
+.premium-dashboard,
+main,
+.overflow-auto {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.premium-dashboard::-webkit-scrollbar,
+main::-webkit-scrollbar,
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
